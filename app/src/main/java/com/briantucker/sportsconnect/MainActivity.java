@@ -63,14 +63,29 @@ public class MainActivity extends AppCompatActivity {
                         winner = "Baseball";
                     }
 
-
-
                     TextView winnerMessage = (TextView) findViewById(R.id.winnerMessage);
 
-                    winnerMessage.setText(winner + " has won!");
+                    winnerMessage.setText(winner + "has won!");
 
                     LinearLayout layout = (LinearLayout)findViewById(R.id.playAgainLay);
                     layout.setVisibility(View.VISIBLE);
+                }
+                else{
+
+                    boolean gameOver = true;
+
+                    for(int counterState : gameState){
+                        if (counterState == 2 ) gameOver = false;
+                    }
+
+                    if (gameOver){
+                        TextView winnerMessage = (TextView) findViewById(R.id.winnerMessage);
+
+                        winnerMessage.setText("It's a draw!");
+
+                        LinearLayout layout = (LinearLayout)findViewById(R.id.playAgainLay);
+                        layout.setVisibility(View.VISIBLE);
+                    }
                 }
             }
         }
