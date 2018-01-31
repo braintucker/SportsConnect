@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
         counter.setImageResource(R.drawable.baseball);
 
-        counter.animate().translationYBy(1000f).setDuration(300);
+        counter.animate().translationYBy(1000f).rotation(360).setDuration(300);
 
     }
 

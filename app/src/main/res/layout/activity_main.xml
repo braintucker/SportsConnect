@@ -23,7 +23,7 @@
             android:layout_column="0"
             android:layout_margin="10dp"
             android:layout_row="0"
-            app:srcCompat="@drawable/basketball" />
+            android:onClick="dropIn"/>
 
         <ImageView
             android:id="@+id/imageView2"
@@ -33,7 +33,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="10dp"
             android:layout_row="0"
-            app:srcCompat="@drawable/basketball" />
+            android:onClick="dropIn"/>
 
         <ImageView
             android:id="@+id/imageView2"
@@ -43,7 +43,7 @@
             android:layout_marginLeft="35dp"
             android:layout_marginTop="10dp"
             android:layout_row="0"
-            app:srcCompat="@drawable/basketball" />
+            android:onClick="dropIn"/>
 
         <ImageView
             android:id="@+id/imageView2"
@@ -53,7 +53,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
             android:layout_row="1"
-            app:srcCompat="@drawable/basketball" />
+            android:onClick="dropIn"/>
 
         <ImageView
             android:id="@+id/imageView2"
@@ -73,7 +73,7 @@
             android:layout_marginLeft="33dp"
             android:layout_marginTop="22dp"
             android:layout_row="1"
-            app:srcCompat="@drawable/basketball" />
+            android:onClick="dropIn" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -83,7 +83,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="30dp"
             android:layout_row="2"
-            app:srcCompat="@drawable/basketball" />
+            android:onClick="dropIn" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -93,7 +93,7 @@
             android:layout_marginLeft="29dp"
             android:layout_marginTop="30dp"
             android:layout_row="2"
-            app:srcCompat="@drawable/basketball" />
+            android:onClick="dropIn" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -103,8 +103,7 @@
             android:layout_marginLeft="33dp"
             android:layout_marginTop="30dp"
             android:layout_row="2"
-            app:srcCompat="@drawable/basketball" />
-
+            android:onClick="dropIn" />
 
     </GridLayout>
 </android.support.constraint.ConstraintLayout>
