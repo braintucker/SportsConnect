@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
 
     int activePlayer = 0;
 
+    boolean isActive = true;
+
     //3 means unplayed
 
     int[] gameState = {2, 2, 2, 2, 2, 2, 2, 2, 2};
@@ -33,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
         int tappedCounter = Integer.parseInt(counter.getTag().toString());
 
-        if (gameState[tappedCounter] == 2 ) {
+        if (gameState[tappedCounter] == 2 && isActive) {
 
             gameState[tappedCounter] = activePlayer;
             counter.setTranslationY(-1000f);
@@ -54,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
 
                     //Someone has won
 
+                    isActive = false;
+
                     String winner = "Basketball";
                     if (gameState[winningPosition[0]] == 0){
                         winner = "Baseball";
@@ -73,6 +77,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void playAgain(View view) {
+
+        isActive = true;
+
         LinearLayout layout = (LinearLayout)findViewById(R.id.playAgainLay);
 
         layout.setVisibility(View.INVISIBLE);
