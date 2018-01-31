@@ -21,23 +21,29 @@ public class MainActivity extends AppCompatActivity {
 
         //possibly allow an option to steal a spot? Currently the balls can replace each other if they are clicked
 
-
         ImageView counter = (ImageView) view;
 
         System.out.println(counter.getTag().toString());
 
-        counter.setTranslationY(-1000f);
+        int tappedCounter = Integer.parseInt(counter.getTag().toString());
 
-        if (activePlayer == 0) {
-            counter.setImageResource(R.drawable.baseball);
-            activePlayer = 1;
-        }
-        else {
-            counter.setImageResource(R.drawable.basketball);
-            activePlayer = 0;
-        }
+        if (gameState[tappedCounter] == 3 ) {
 
-        counter.animate().translationYBy(1000f).rotation(360).setDuration(300);
+            gameState[tappedCounter] = activePlayer;
+
+            counter.setTranslationY(-1000f);
+
+            if (activePlayer == 0) {
+                counter.setImageResource(R.drawable.baseball);
+                activePlayer = 1;
+            } else {
+                counter.setImageResource(R.drawable.basketball);
+                activePlayer = 0;
+            }
+
+            counter.animate().translationYBy(1000f).rotation(360).setDuration(300);
+
+        }
 
     }
 
